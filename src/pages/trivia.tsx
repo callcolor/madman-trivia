@@ -1,10 +1,11 @@
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import * as React from 'react';
-import * as styles from './Index.module.scss';
+import * as styles from './Trivia.module.scss';
 
 import Layout from '../components/layout';
+import Trivia from '../components/Trivia/trivia';
 
-interface IndexPageProps {
+interface TriviaPageProps {
   data: {
     site: {
       siteMetadata: {
@@ -15,8 +16,8 @@ interface IndexPageProps {
   };
 }
 
-export const indexPageQuery = graphql`
-  query IndexPageQuery {
+export const triviaPageQuery = graphql`
+  query TriviaPageQuery {
     site {
       siteMetadata {
         name
@@ -26,8 +27,7 @@ export const indexPageQuery = graphql`
   }
 `;
 
-export default class IndexPage extends React.Component<IndexPageProps, {}> {
-
+export default class TriviaPage extends React.Component<TriviaPageProps, {}> {
   public render() {
     const {
       name,
@@ -37,12 +37,9 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
     return (
       <Layout>
         <div className={styles.Container}>
-          <h1>{name}</h1>
-          <p>{tagline}</p>
+          <h1>Trivia</h1>
 
-          <p>
-            <Link to="/trivia">Play Trivia!</Link>
-          </p>
+          <Trivia />
         </div>
       </Layout>
     );
