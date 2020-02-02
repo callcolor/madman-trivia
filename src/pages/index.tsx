@@ -3,6 +3,7 @@ import * as React from 'react';
 import * as styles from './Index.module.scss';
 
 import Layout from '../components/Layout';
+import MadmanImg from "../assets/madman_200.png";
 
 interface IndexPageProps {
   data: {
@@ -41,7 +42,10 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
           <p>{tagline}</p>
 
           <p>
-            <Link to="/trivia">Play Trivia!</Link>
+            <img src={MadmanImg} alt={`Madman Trivia Logo`}/>
+          </p>
+          <p>
+            <Link to="/trivia" className={styles.CtaButton}>Play Trivia!</Link>
           </p>
         </div>
       </Layout>
