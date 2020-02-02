@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as styles from './Layout.module.scss';
 
-import Menu from '../components/Menu/Menu';
+import Menu from './Menu/Menu';
 
 const Layout: React.FunctionComponent<{}> = ({ children }) => (
   <div className={styles.Container}>

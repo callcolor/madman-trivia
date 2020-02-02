@@ -1,7 +1,7 @@
 import * as React from 'react';
 import axios from 'axios';
 import * as styles from './Trivia.module.scss';
-import Layout from '../layout';
+import Layout from '../Layout';
 
 interface TriviaPageState {
   answers: string[];
